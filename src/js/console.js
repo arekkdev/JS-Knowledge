@@ -30,7 +30,7 @@ console.log(document);
 document.querySelector("p");
 
 // Changing styles of elements
-document.querySelector("div").style.background = "blue";
+document.querySelector("body").style.background = "blue";
 
 // Console Error & Warnings
 console.error("This is error.");

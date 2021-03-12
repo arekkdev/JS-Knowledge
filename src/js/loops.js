@@ -161,7 +161,7 @@ console.log(ids);
  * For in Loop
  */
 
-// This type of lopp is often used of objects
+// This type of lopp is often used for objects
 console.clear();
 
 const user = {

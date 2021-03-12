@@ -162,7 +162,6 @@ console.log(ids);
  */
 
 // This type of lopp is often used for objects
-console.clear();
 
 const user = {
   firstName: 'John',

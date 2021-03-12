@@ -116,15 +116,78 @@ do {
 /*
  * Loop through Arrays
  */
-console.clear();
+
+// Prefered methods for looping through arrays is forach, but these below work as well
+
 const cars = ["Ford", "Honda", "Toyota", "Audi"];
 
-//for (let i = 0; i < cars.length; i++) {
-//console.log(cars[i]); //cars[index] - way to get elements from array
-//}
+for (let i = 0; i < cars.length; i++) {
+  console.log(`${cars[i]} - for loop`); //cars[index] - way to get elements from array
+}
 
 let x = 0;
 
 while (x < cars.length) {
-  console.log(cars[x]);
+  console.log(`${cars[x]} - while loop`);
+  x++;
 }
+
+// foreach method of looping through arrays
+// the self-invoking callback function takes three parameters (current value, index, array(the whole array we are working on))
+cars.forEach(function(car, index, array) {
+  console.log(`${index} : ${car} - foreach (prefered) loop for arrays (not for IE 11)`);
+});
+
+// The above can also be ES6 shorter version
+cars.forEach(car => console.log(car));
+
+// Map
+// Map is used to return a different array
+// Here example of returing objects id from the array of objects
+const users = [
+  {id: 1, name: 'John'},
+  {id: 2, name: 'Sara'},
+  {id: 3, name: 'Karen'},
+]
+
+const ids = users.map(function(user){
+  return user.id;
+});
+
+console.log(ids);
+
+
+/**
+ * For in Loop
+ */
+
+// This type of lopp is often used of objects
+console.clear();
+
+const user = {
+  firstName: 'John',
+  lastName : 'Doe',
+  age      :  40
+}
+
+for (let x in user) {
+  console.log(`${x} : ${user[x]}`);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

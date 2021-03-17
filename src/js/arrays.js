@@ -107,6 +107,10 @@ strings.reverse();
 console.log(`Reversed array : ${strings}`);
 
 // Concatanating arrays
+
+// concat() method can join two or more array e.g concat(string_array, string_array_1, string_array_2) 
+// https://www.w3schools.com/jsref/jsref_concat_array.asp
+
 val_1_4 = numbers.concat(strings);
 console.log(`Concatanated numbers and strings array ${val_1_4}`);
 

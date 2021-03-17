@@ -7,7 +7,7 @@ for (let i = 0; i < elements.length; i++) {
 }
 
 // ES 6 for loop
-for (const el of elements) {
+for (let el of elements) {
   console.log(el);
 }
 
@@ -172,6 +172,7 @@ const user = {
 for (let x in user) {
   console.log(`${x} : ${user[x]}`);
 }
+// x gives us key from key: value pair, to get value we need user[x]
 
 
 

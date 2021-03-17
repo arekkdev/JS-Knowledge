@@ -78,11 +78,11 @@ console.log(strings);
   element to be added
 )*/
 
-// If no third parameter and its start and end value are the same - in this cae one element will be removed
+// If no third parameter and also start and end value are the same - in this case one element will be removed
 strings.splice(1, 1);
 console.log(`Splice 1 element, at index 1 : ${strings}`);
 
-// Starting at index 2 remove 5 elements
+// Starting at index 2 remove 5 elements (it will remove elements at index 2, 3, 4, 5, 6)
 numbers.splice(2, 5);
 console.log(`Splice 5 elements, starting at index 2 : ${numbers}`);
 
@@ -94,7 +94,7 @@ console.log(`Add new first value using splice : ${strings}`);
 
 // Add new value replacing 6 elements starting at index 0
 strings.splice(0, 6, "Baam", "Laam", "Tamm");
-console.log(`Add Baam Laam Taam replacing elemnts 0 - 6: ${strings}`);
+console.log(`Add Baam Laam Taam replacing elemnts at index 0 - 6: ${strings}`);
 
 // Remove a single item at position 1
 console.log(strings);
@@ -110,8 +110,11 @@ console.log(`Reversed array : ${strings}`);
 val_1_4 = numbers.concat(strings);
 console.log(`Concatanated numbers and strings array ${val_1_4}`);
 
-// Sorting arrays
 
+/**
+ * Sorting arrays 
+ */
+ 
 val_1_5 = strings.sort();
 console.log(`Sorted strings array ${val_1_5}`);
 
@@ -138,29 +141,34 @@ val_2_0 = numbers.find(over12);
 console.log(`First number over 12 is ${val_2_0}`);
 
 
-// Array looping
+/**
+ * Array looping
+ */
 
 const tab = [1,2,3];
 
-
+// ES 5 - supported in IE 11
 for (let i = 0; i < tab.length; i++) {
   console.log(tab[i]);
 }
 
-
+// ES 6
 for (let h of tab) {
   console.log(h);
 }
 
+// ES 5 - not supported in IE 11
 tab.forEach(
   function(el) {
     console.log(el);  
   }
 );
 
+// ES 6
 tab.forEach(el => console.log(el))
 
-
+// map
 let test = tab.map(function(t){
   return `${t} + 5`;
 })
+
